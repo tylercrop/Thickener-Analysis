@@ -1,0 +1,28 @@
+Flotation Circuit Feed (tons per hour),TPH
+Con 2 Cycl Overflow 80 % passing Size ,µm
+Con 2 Cycl O/F  % Passing 106 mic ,%
+Flotation Tails  - % Cu ,%
+Flotation Tails - % Fe ,%
+Flotation Tails -%Solid ,%
+TH602 Solids Feedrate ,TPH
+TH602 Flocculant Addition Flow PV ,L/hr
+TH602 Floc Flow Setpoint ,L/hr
+TH602 Floc Addition G/T Setpoint ,G/T
+Flocculant Addition Process Water Dilution ,m³/hr
+TH602 Tailings Thickener pH Cntrl PV,pH
+TH602 Tail Thickener Rake Height ,%
+TH602 Rake Torque Ctrl PV ,%
+TH602 Bed Pressure Ctrl PV ,%
+TH602 Bed Level Ctrl PV ,%
+TH602 Tails Thicknr Settling Rate Controller PV,S
+PU664/665 Discharge Flow Ctrl PV ,m³/hr
+PU664/665 Discharge %Sol PV ,%
+PU664 Motor Current,A
+PU665 Motor Current,A
+TH602 U/F Pmp 664 Speed PV ,%
+TH602 U/F Pmp 665 Speed PV ,%
+TH602 U/F Mass Calc CPV ,TPH
+PU664/665   Disch Process Water Addition Valve Position,
+PU664 Suct  Process Water Addition Valve Position,
+PU665 Suct  Process Water Addition Valve Position,
+,%
