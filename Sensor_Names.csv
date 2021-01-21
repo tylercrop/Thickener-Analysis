@@ -1,28 +1,29 @@
-Flotation Circuit Feed (tons per hour),TPH
-Con 2 Cycl Overflow 80 % passing Size ,µm
-Con 2 Cycl O/F  % Passing 106 mic ,%
-Flotation Tails  - % Cu ,%
-Flotation Tails - % Fe ,%
-Flotation Tails -%Solid ,%
-TH602 Solids Feedrate ,TPH
-TH602 Flocculant Addition Flow PV ,L/hr
-TH602 Floc Flow Setpoint ,L/hr
-TH602 Floc Addition G/T Setpoint ,G/T
-Flocculant Addition Process Water Dilution ,m³/hr
-TH602 Tailings Thickener pH Cntrl PV,pH
-TH602 Tail Thickener Rake Height ,%
-TH602 Rake Torque Ctrl PV ,%
-TH602 Bed Pressure Ctrl PV ,%
-TH602 Bed Level Ctrl PV ,%
-TH602 Tails Thicknr Settling Rate Controller PV,S
-PU664/665 Discharge Flow Ctrl PV ,m³/hr
-PU664/665 Discharge %Sol PV ,%
-PU664 Motor Current,A
-PU665 Motor Current,A
-TH602 U/F Pmp 664 Speed PV ,%
-TH602 U/F Pmp 665 Speed PV ,%
-TH602 U/F Mass Calc CPV ,TPH
-PU664/665   Disch Process Water Addition Valve Position,
-PU664 Suct  Process Water Addition Valve Position,
-PU665 Suct  Process Water Addition Valve Position,
-,%
+TimeStamp,Timestamp Units,0,,Parameters in Columun C
+Flotation Circuit Feed (tons per hour),TPH,0,,
+Con 2 Cycl Overflow 80 % passing Size ,µm,0,,
+Con 2 Cycl O/F  % Passing 106 mic ,%,0,,
+Flotation Tails  - % Cu ,%,0,,
+Flotation Tails - % Fe ,%,0,,
+Flotation Tails -%Solid ,%,0,,
+TH602 Solids Feedrate ,TPH,0,,
+TH602 Flocculant Addition Flow PV ,L/hr,0,,
+TH602 Floc Flow Setpoint ,L/hr,0,,
+TH602 Floc Addition G/T Setpoint ,G/T,0,,
+Flocculant Addition Process Water Dilution ,m³/hr,0,,
+TH602 Tailings Thickener pH Cntrl PV,pH,9.5,Maximum,
+TH602 Tail Thickener Rake Height ,%,0,,
+TH602 Rake Torque Ctrl PV ,%,40,Maximum,
+TH602 Bed Pressure Ctrl PV ,%,19,Maximum,
+TH602 Bed Level Ctrl PV ,%,0,,
+TH602 Tails Thicknr Settling Rate Controller PV,S,0,,
+PU664/665 Discharge Flow Ctrl PV ,m³/hr,1,Minimum,
+PU664/665 Discharge %Sol PV ,%,0,,
+PU664 Motor Current,A,500,Maximum,
+PU665 Motor Current,A,500,Maximum,
+TH602 U/F Pmp 664 Speed PV ,%,0,,
+TH602 U/F Pmp 665 Speed PV ,%,0,,
+TH602 U/F Mass Calc CPV ,TPH,0,,
+PU664/665   Disch Process Water Addition Valve Position,,0,,
+PU664 Suct  Process Water Addition Valve Position,,0,,
+PU665 Suct  Process Water Addition Valve Position,,0,,
+Target,%,0,,
