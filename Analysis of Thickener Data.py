@@ -143,27 +143,27 @@ Section 1
 
 
 #Round about way of getting the dimension size so we know what cols to read
-data_raw = np.loadtxt("train.CSV",delimiter = ",",dtype=object)
+data_raw = np.loadtxt("train.csv",delimiter = ",",dtype=object,encoding = 'unicode_escape')
 data_dimensions = np.shape(data_raw)
 usecol_input = np.linspace(0,data_dimensions[1]-1,data_dimensions[1],dtype = int)
 
 #get a string of headers
-header_file = open("train.CSV")
+header_file = open("train.csv")
 header = header_file.readline()
 header = header.split(',')
 
 #Get the explanation of what sensors do
-sensor_description = np.loadtxt("Sensor_Names.CSV", delimiter = ",", dtype = str, usecols = 0)
-sensor_units = np.loadtxt("Sensor_Names.CSV",delimiter = ",", dtype = str, usecols = 1)
+sensor_description = np.loadtxt("Sensor_Names.csv", delimiter = ",", dtype = str, usecols = 0,encoding = 'unicode_escape')
+sensor_units = np.loadtxt("Sensor_Names.csv",delimiter = ",", dtype = str, usecols = 1,encoding = 'unicode_escape')
 
 #get the parameters of sensors
-parameter = np.loadtxt("Sensor_Names.CSV", delimiter = ",", dtype = float,usecols = 2)
-parameter_description = np.loadtxt("Sensor_Names.CSV", delimiter = ",", dtype = str, usecols = 3)
+parameter = np.loadtxt("Sensor_Names.csv", delimiter = ",", dtype = float,usecols = 2,encoding = 'unicode_escape')
+parameter_description = np.loadtxt("Sensor_Names.csv", delimiter = ",", dtype = str, usecols = 3,encoding = 'unicode_escape')
 
 
 #Extract all the data points we can. Change "No Data" and "Bad Input" cells to None
-data_raw = np.loadtxt("train.CSV",delimiter = ",",skiprows = 1, usecols = usecol_input, dtype = str)
-time = np.loadtxt("train.CSV", delimiter = ",",skiprows =1, usecols = 0, dtype = str)
+data_raw = np.loadtxt("train.csv",delimiter = ",",skiprows = 1, usecols = usecol_input, dtype = str,encoding = 'unicode_escape')
+time = np.loadtxt("train.csv", delimiter = ",",skiprows =1, usecols = 0, dtype = str,encoding = 'unicode_escape')
 data_dimensions = np.shape(data_raw)
 number_sensors = len(data_raw[1])
 
