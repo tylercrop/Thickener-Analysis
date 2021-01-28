@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.interpolate import interp1d
 
 #for reading timestamps on the CSV file
 import datetime
@@ -228,6 +229,45 @@ Error = np.abs(real-target)
 t = np.linspace(0,2000,2001)
 plt.plot(t,Error)
 
+find = target[50]
+for i in range(0,500):
+    if(real[i]==find):
+        print("Find:",find,"index:50")
+        print("Real:",real[i],"index:",i)
+print("Complete")
 #%%
 plotdata(time_obj[2420],time_obj[2460],1)
 subplotdata(9,3,1,28,0,500)
+#%%
+#test data is empty
+import math
+testsensors = [20,21,25,26,27]
+for i in range(0,len(testsensors)):
+    for j in range(0, data_dimensions[0]):
+        if(math.isnan(data[j,testsensors[i]]) == False):
+            print("Not Empty", sensor_description[testsensors[i]])
+            break
+print("Finished")
+#%%
+for i in range(0,data_dimensions[0]):
+    if(data[i,10] != 19.0):
+        print("Not always 19.0",data[i,10])
+        break
+    #%%
+plotdata(time_obj[0],time_obj[500000],10)
+
+#%%
+from scipy.integrate import quad
+
+t = np.linspace(0,2000,2001)
+cu_percent = data[0:2001,4]
+fe_percent = data[0:2001,5]
+fl_percent = data[0:2001,6]
+
+cubic_spline_cu_percent = interp1d(t,cu_percent,kind = "quartic")
+cubic_spline_fe_percent = interp1d(t,fe_percent,kind = "cubic")
+cubic_spline_fl_percent = interp1d(t,fl_percent,kind = "cubic")
+
+t = np.linspace(0,200,1000)
+
+plt.plot(t,cu_plot)
