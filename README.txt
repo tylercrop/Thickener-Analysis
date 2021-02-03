@@ -7,7 +7,38 @@ train.csv  *you can find that in Sam's dropbox (the file is too big)
 ***********
 Analysis of Thickener Data
 
-There are some functions that might be helpful
+Outputs Broken_Constraints.csv: a file with the time index and if a constraint was broken (0 being false 1 being true)
+
+Cleaned Data Makes the following modifications:
+
+-Time is converted into minutes with the first point being time 0.
+-Sensors PU664 Motor Current, PU665 Motor Current, Sensor PU664/665 Disch Proces Water Addition Valve
+Position, Sensor PU664 Suct Process Water Addition Valve Position were all empty data sets and removed
+-"No Data" and "Bad Input" were converted to "NaN"
+-Flotation Tails -%Cu, % Fe, % Solid data was smoothed
+-Pumps were switched into two arrays, the maximum pump speed and min pump speed (for the majority of the time either one is on and the other one is off)
+
+The following observations were made:
+1) Number of Times time interval is not 1 min
+Not Equal time interval of 1 minute
+time interval: -1 day, 23:01:00
+Index Location for time_obj array 5939 
+
+Not Equal time interval of 1 minute
+time interval: 1:01:00
+Index Location for time_obj array 268019 
+
+Not Equal time interval of 1 minute
+time interval: -1 day, 23:01:00
+Index Location for time_obj array 530099 
+
+Total Number Bad Time Intervals: 3 
+
+2)Test if Floc Setpoint and Floc Addition flow are within 5% of each other always
+Number of times they are different: 42140/530000
+Floc Setpoint and Floc Addition flow follow each other closely, but are significantly different
+***********
+There are some functions that might be helpful for analyzing the data in future projects
 
 plotdata: this will plot a graph of a specified sensor
 time_start:   time_obj[index]
